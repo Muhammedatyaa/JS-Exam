@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Yummy</title>
+</head>
+<body>
+    <section class="meals" id="meals">
+        <div class="loadingScreen">
+            <div class="lds-ripple"><div></div><div></div></div>
+        </div>
+        <div class="container my-5">
+            <div class="side-bar">
+                <div class="links" id="links">
+                    <div class="linksContent">
+                        <ul>
+                            <li id="searchBtn">Search</li>
+                            <li id="categoriesBtn">Categories</li>
+                            <li id="areaBtn">Area</li>
+                            <li id="ingredientsBtn">Ingredients</li>
+                            <li id="contactBtn">Contact Us</li>
+                        </ul>
+                        <div class="footer">
+                            <div>
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <p>Copyright Â© 2019 All Rights <span class="d-block">Reserved.</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <div class="icons text-center">
+                        <i id="closeIcon" class="fa-solid fa-x d-none"></i>
+                        <i id="barIcon" class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="text-center">
+                        <i class="fa-solid fa-globe d-block"></i>
+                        <i class="fa-solid fa-share-nodes d-block"></i>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="search d-none" id="search">
+                <div class="inputs d-flex my-4">
+                    <input id="searchByName" type="text" placeholder="Search By Name" class="form-control mx-2 bg-transparent text-white" >
+                    <input id="searchByFl" maxlength="1" type="text" placeholder="Search By First Letter" class="form-control mx-2 bg-transparent text-white" >
+                </div>
+            </div>
+
+            <div class="row" id="displayedMeals">
+            </div>
+
+            <div class="row" id="catSection">
+            </div>
+
+            <div class="row" id="areaSection">
+            </div>
+
+            <div class="row" id="ingredSection">
+            </div>
+
+            <div class="row twentyMeals" id="twentyMeals">
+
+            </div>
+            <div class="meal d-flex text-white" id="meal">
+            </div>
+
+            <div class="contactForm d-none" id="contactForm">
+                <div class="row">
+                    <div class="col-md-6 my-3">
+                        <input onkeyup="nameAlert()" class="form-control" type="text" placeholder="Enter Your Name" id="userName">
+                        <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Special characters and numbers not allowed
+                        </div>
+                    </div>                    
+                    <div class="col-md-6 my-3">
+                        <input onkeyup="emailAlert()" class="form-control" type="email" placeholder="Enter Your Email" id="userEmail">
+                        <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Email not valid *exemple@yyy.zzz
+                        </div>
+                    </div>                    
+                    <div  class="col-md-6 my-3">
+                        <input onkeyup="phoneAlert()" class="form-control" type="text" placeholder="Enter Your Phone" id="userPhone">
+                        <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Enter valid Phone Number
+                        </div>
+                    </div>                    
+                    <div class="col-md-6 my-3">
+                        <input onkeyup="ageAlert()" class="form-control" type="number" placeholder="Enter Your Age" id="userAge">
+                        <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Enter valid age
+                        </div>
+                    </div>                    
+                    <div class="col-md-6 my-3">
+                        <input onkeyup="passwordAlert()" class="form-control" type="password" placeholder="Enter Your Password" id="userPassword">
+                        <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Enter valid password *Minimum eight characters, at least one letter and one number:*
+                        </div>
+                    </div>                    
+                    <div class="col-md-6 my-3">
+                        <input onkeyup="repasswordAlert()" class="form-control" type="password" placeholder="Repassword" id="Repassword">
+                        <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Not Matched Password 
+                        </div>
+                    </div>
+                </div>
+                <button id="submit" disabled class="btn btn-danger bg-transparent text-danger w-auto d-flex mx-auto" >submit</button>
+            </div>
+        </div> 
+    </section>
+
+    <script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
